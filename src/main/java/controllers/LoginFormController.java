@@ -38,7 +38,10 @@ public class LoginFormController {
 
             Stage stage = new Stage();
             try {
-                stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/views/user.fxml"))));
+                stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/views/dashboard.fxml"))));
+                Stage tempStage = (Stage) emailTf.getScene().getWindow();
+                tempStage.close();
+
             } catch (
                     IOException e) {
                 throw new RuntimeException(e);
