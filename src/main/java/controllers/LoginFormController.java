@@ -39,6 +39,7 @@ public class LoginFormController {
             Stage stage = new Stage();
             try {
                 stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/views/dashboard.fxml"))));
+                stage.setTitle("Dashboard");
                 Stage tempStage = (Stage) emailTf.getScene().getWindow();
                 tempStage.close();
 

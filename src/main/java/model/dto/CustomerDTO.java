@@ -1,5 +1,14 @@
 package model.dto;
 
+
+import lombok.*;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
+
 public class CustomerDTO {
     private String id;
     private String title;

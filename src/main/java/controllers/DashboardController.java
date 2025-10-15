@@ -7,6 +7,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
+import java.security.spec.ECField;
+
 public class DashboardController {
 
     @FXML
@@ -29,6 +31,7 @@ public class DashboardController {
         Stage stage = new Stage();
         try{
             stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/views/login_form.fxml"))));
+            stage.setTitle("Login Form");
             Stage tempStage = (Stage) smBtn.getScene().getWindow();
             tempStage.close();
         }catch (Exception e){
@@ -39,6 +42,16 @@ public class DashboardController {
 
     @FXML
     void cmOnAction(ActionEvent event) {
+        Stage stage = new Stage();
+        try{
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/views/customer_dashboard.fxml"))));
+            stage.setTitle("Customer Dashboard");
+            Stage currentStage = (Stage) backBtn.getScene().getWindow();
+            currentStage.close();
+        }catch (Exception e){
+            throw new RuntimeException();
+        }
+        stage.show();
 
     }
 
