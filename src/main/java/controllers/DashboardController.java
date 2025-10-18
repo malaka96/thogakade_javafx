@@ -62,7 +62,17 @@ public class DashboardController {
 
     @FXML
     void imOnAction(ActionEvent event) {
-
+        Stage stage = new Stage();
+        try{
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/views/item_dashboard.fxml"))));
+            stage.setTitle("Item Dashboard");
+            Stage currentStage = (Stage) backBtn.getScene().getWindow();
+            currentStage.close();
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+//            throw new RuntimeException();
+        }
+        stage.show();
     }
 
     @FXML
