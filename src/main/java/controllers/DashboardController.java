@@ -77,6 +77,17 @@ public class DashboardController {
 
     @FXML
     void smOnAction(ActionEvent event) {
+        Stage stage = new Stage();
+        try{
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/views/supplier_dashboard.fxml"))));
+            stage.setTitle("Staff Dashboard");
+            Stage currentStage = (Stage) backBtn.getScene().getWindow();
+            currentStage.close();
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+//            throw new RuntimeException();
+        }
+        stage.show();
 
     }
 
